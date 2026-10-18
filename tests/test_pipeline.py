@@ -40,4 +40,7 @@ def test_end_to_end(tmp_path):
     assert (tmp_path / "metrics.json").is_file()
     assert (tmp_path / "test_predictions.csv").is_file()
     assert (tmp_path / "model.joblib").is_file()
+    assert (tmp_path / "confusion_matrix.png").is_file()
+    assert (tmp_path / "roc_curve.png").is_file()
+    assert (tmp_path / "feature_importance.png").is_file()
     assert json.loads((tmp_path / "metrics.json").read_text())["dataset"] == "synthetic, fictional"

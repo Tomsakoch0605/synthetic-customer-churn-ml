@@ -25,7 +25,7 @@
     "precision": 0.6666666666666666,
     "recall": 0.2391304347826087,
     "f1": 0.352,
-    "brier_score": 0.18222724687150935,
+    "brier_score": 0.18222724687150937,
     "confusion_matrix_tn_fp_fn_tp": [
       197,
       11,
