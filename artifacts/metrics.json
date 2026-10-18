@@ -1,0 +1,66 @@
+{
+  "dataset": "synthetic, fictional",
+  "seed": 42,
+  "train_rows": 1200,
+  "test_rows": 300,
+  "test_prevalence": 0.30666666666666664,
+  "selection_metric": "training five-fold CV ROC-AUC",
+  "cv": {
+    "baseline": {
+      "roc_auc_mean": 0.5,
+      "roc_auc_std": 0.0,
+      "average_precision_mean": 0.30583333333333335
+    },
+    "logistic": {
+      "roc_auc_mean": 0.7191416651938092,
+      "roc_auc_std": 0.047545465416000125,
+      "average_precision_mean": 0.5143215818065148
+    }
+  },
+  "selected_model": "logistic",
+  "threshold": 0.5,
+  "test": {
+    "roc_auc": 0.7227215719063544,
+    "average_precision": 0.5740369871057467,
+    "precision": 0.6666666666666666,
+    "recall": 0.2391304347826087,
+    "f1": 0.352,
+    "brier_score": 0.18222724687150935,
+    "confusion_matrix_tn_fp_fn_tp": [
+      197,
+      11,
+      70,
+      22
+    ]
+  },
+  "permutation_importance_roc_auc": [
+    {
+      "feature": "tenure_months",
+      "importance": 0.09819
+    },
+    {
+      "feature": "monthly_fee",
+      "importance": 0.0631
+    },
+    {
+      "feature": "payment_failures_90d",
+      "importance": 0.04606
+    },
+    {
+      "feature": "support_tickets_90d",
+      "importance": 0.03585
+    },
+    {
+      "feature": "auto_renew",
+      "importance": 0.02048
+    },
+    {
+      "feature": "logins_30d",
+      "importance": 0.01173
+    },
+    {
+      "feature": "plan",
+      "importance": 0.00647
+    }
+  ]
+}
